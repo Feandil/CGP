@@ -1,0 +1,47 @@
+{
+	"current": {
+		"title": "SMI on {{HOST}}",
+		"vertical": "Number",
+		"legend_format": "%5.0lf"
+	},
+	"frequency": {
+		"title": "Frequency ({{PI}}) on {{HOST}}",
+		"vertical": "MHz",
+		"legend_format": "%5.1lf%s"
+	},
+	"gauge": {
+		"title": "Sanity check (TSC/s) on {{HOST}}",
+		"vertical": "MHz",
+		"legend_format": "%5.3lf%s"
+	},
+	"percent": {
+		"type": "stacked",
+		"title": "C states ({{PI}}) on {{HOST}}",
+		"vertical": "Percent",
+		"legend_format": "%5.1lf"
+	},
+	"power": {
+		"title": "Power consumption ({{PI}}) on {{HOST}}",
+		"vertical": "Watts",
+		"legend_format": "%5.1lf%s",
+		"legend": {
+			"Cor_W": {
+				"name": "Cores"
+			},
+			"GFX_W": {
+				"name": "Graphics"
+			},
+			"Pkg_W": {
+				"name": "Package"
+			},
+			"RAM_W": {
+				"name": "DRAM"
+			}
+		}
+	},
+	"temperature": {
+		"title": "Temperature on {{HOST}}",
+		"vertical": "°C",
+		"legend_format": "%5.1lf%s"
+	}
+}
