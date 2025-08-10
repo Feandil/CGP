@@ -37,8 +37,11 @@ browsers download the RRD files and allows the user to zoom and move though the
 history using their pointer device.
 
 See [doc/nginx.conf](doc/nginx.conf) for an example configuration for the nginx
-web server. The `.htaccess` file in the top-level directory can serve as a guide
-for Apache configuration.
+web server.
+
+The `.htaccess` file in the top-level directory can serve as a guide for Apache
+configuration. Add `AllowOverride` directive to your virtual host configuration
+to allow `.htaccess` use.
 
 Performance tips
 ----------------
@@ -63,7 +66,7 @@ set up to reduce data usage and CPU time:
 
 License
 -------
-CGP is released under the terms of GPL version 3. See [doc/LICENSE](doc/LICENSE)
+CGP is released under the terms of GPL version 3. See [LICENSE](LICENSE)
 for the full license text.
 
 Acknowledgements
