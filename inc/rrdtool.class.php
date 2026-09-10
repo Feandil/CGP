@@ -4,15 +4,14 @@ class RRDTool {
 	var $rrdtool = '/usr/bin/rrdtool';
 
 	function __construct($rrdtool) {
-		if (file_exists($rrdtool)) {
-			$this->rrdtool = $rrdtool;
-		} else {
-			printf('<p class="warn">Error: RRDTool (<em>%s</em>) is not executable. Please install RRDTool it and configure <em>$CONFIG[\'rrdtool\'].</em></p>', $rrdtool);
-			die();
-		}
+		$this->rrdtool = $rrdtool;
 	}
 
 	function rrd_info($rrdfile) {
+		if (!file_exists($rrdtool)) {
+			printf('<p class="warn">Error: RRDTool (<em>%s</em>) is not executable. Please install RRDTool it and configure <em>$CONFIG[\'rrdtool\'].</em></p>', $this->rrdtool);
+			die();
+		}
 		if (file_exists($rrdfile)) {
 			$raw_info = shell_exec(
 				escapeshellarg($this->rrdtool)
